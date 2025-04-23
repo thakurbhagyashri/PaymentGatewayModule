@@ -1,4 +1,5 @@
 package com.example.pgm.controller;
+import com.example.pgm.dto.OrderResponseDTO;
 import com.example.pgm.dto.PaymentDTO;
 import com.example.pgm.service.PaymentService;
 import lombok.RequiredArgsConstructor;
@@ -33,5 +34,10 @@ public class PaymentController {
     public ResponseEntity<Void> deletePayment(@PathVariable Long id) {
         paymentService.deletePayment(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/createOrder")
+    public ResponseEntity<OrderResponseDTO> createPaymentOrder(@RequestParam("amount") long amount) {
+        return ResponseEntity.ok(paymentService.createPaymentOrder(amount));
     }
 }
