@@ -15,10 +15,10 @@ public class PaymentController {
 
     private final PaymentService paymentService;
 
-    @PostMapping
-    public ResponseEntity<PaymentDTO> createPayment(@RequestBody PaymentDTO dto) {
-        return ResponseEntity.ok(paymentService.createPayment(dto));
-    }
+//    @PostMapping
+//    public ResponseEntity<PaymentDTO> createPayment(@RequestBody PaymentDTO dto) {
+//        return ResponseEntity.ok(paymentService.createPayment(dto));
+//    }
 
     @GetMapping("/{id}")
     public ResponseEntity<PaymentDTO> getPayment(@PathVariable Long id) {
