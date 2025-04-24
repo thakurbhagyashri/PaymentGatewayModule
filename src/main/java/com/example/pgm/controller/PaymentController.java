@@ -18,7 +18,7 @@ public class PaymentController {
 //    @PostMapping
 //    public ResponseEntity<PaymentDTO> createPayment(@RequestBody PaymentDTO dto) {
 //        return ResponseEntity.ok(paymentService.createPayment(dto));
-//    }
+//   }
 
     @GetMapping("/{id}")
     public ResponseEntity<PaymentDTO> getPayment(@PathVariable Long id) {

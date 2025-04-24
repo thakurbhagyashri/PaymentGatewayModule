@@ -60,7 +60,7 @@ public class PaymentServiceImpl implements PaymentService {
 
             JSONObject options = new JSONObject();
 //            The reason for multiplying the amount by 100 is because Razorpay API expects
-//            the amount to be in "paise", which is the subunit of the Indian rupee (INR). Here's how it works:
+//            the amount to be in "paise", which is to the subunit of the Indian rupee (INR). Here's how it works:
             options.put("amount", amount * 100); // Razorpay works in paise
             options.put("receipt", "txn_" + System.currentTimeMillis());
             options.put("payment_capture", 1);
